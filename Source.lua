@@ -2,7 +2,7 @@
 local Solaris = Instance.new("ScreenGui")
 Solaris.Name = "dosage's solaris gui"
 Solaris.Parent = game.CoreGui
-Solaris.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+--Solaris.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 local NotificationHolder = Instance.new("ScreenGui")
 NotificationHolder.Name = "notiHolder"
