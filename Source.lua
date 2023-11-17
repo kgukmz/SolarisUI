@@ -30,7 +30,7 @@ end
 
 
 local NotificationFrame = game:GetObjects("rbxassetid://6924028278")[1]
-NotificationFrame.ZIndex = 4
+--NotificationFrame.ZIndex = 4
 NotificationFrame.Parent = NotificationHolder
 script = NotificationFrame.NotifScript
 local Notify = loadstring(NotificationFrame.NotifScript.Source)()
@@ -200,7 +200,7 @@ function Ripple(Object)
 		Circle.Parent = Object
 		Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Circle.BackgroundTransparency = 1.000
-		Circle.ZIndex = 10
+		--Circle.ZIndex = 10
 		Circle.Image = "rbxassetid://266543268"
 		Circle.ImageColor3 = Color3.fromRGB(210,210,210)
 		Circle.ImageTransparency = 0.8
@@ -271,7 +271,7 @@ function SolarisLib:New(Config)
         local MarketplaceService = game:GetService("MarketplaceService")
         local MusicFrame, MusicPreset = game:GetObjects("rbxassetid://7296373622")[1], game:GetObjects("rbxassetid://7296615234")[1]
         MusicFrame.Parent = Solaris
-        MusicFrame.ZIndex = 5
+        --MusicFrame.ZIndex = 5
         MusicFrame.Visible = SolarisLib.Settings.ShowMusicOnLaunch
         MusicFrame.Frame.Title.Text = "Not Playing"
         MusicFrame.Frame.Progress.ProgressFrame.Size = UDim2.new(0,0,1,0)
