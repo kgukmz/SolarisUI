@@ -2,7 +2,7 @@
 local Solaris = Instance.new("ScreenGui")
 Solaris.Name = "dosage's solaris gui"
 Solaris.Parent = game.CoreGui
---Solaris.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Solaris.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 local NotificationHolder = Instance.new("ScreenGui")
 NotificationHolder.Name = "notiHolder"
@@ -28,13 +28,14 @@ local function CheckKey(tab, key)
 end
 
 
-
+--[[
 local NotificationFrame = game:GetObjects("rbxassetid://6924028278")[1]
---NotificationFrame.ZIndex = 4
+NotificationFrame.ZIndex = 4
 NotificationFrame.Parent = NotificationHolder
 script = NotificationFrame.NotifScript
 local Notify = loadstring(NotificationFrame.NotifScript.Source)()
 script = oldScript
+--]]
 
 local SolarisLib = {
     Themes = {
@@ -200,7 +201,7 @@ function Ripple(Object)
 		Circle.Parent = Object
 		Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Circle.BackgroundTransparency = 1.000
-		--Circle.ZIndex = 10
+		Circle.ZIndex = 10
 		Circle.Image = "rbxassetid://266543268"
 		Circle.ImageColor3 = Color3.fromRGB(210,210,210)
 		Circle.ImageTransparency = 0.8
@@ -213,10 +214,10 @@ function Ripple(Object)
 		end)
 	end)
 end
-
+--[[
 function SolarisLib:Notification(title, desc)
     Notify:New(title,desc)
-end    
+end--]]
 
 function SolarisLib:New(Config)
     if not isfolder(Config.FolderToSave) then 
@@ -271,7 +272,7 @@ function SolarisLib:New(Config)
         local MarketplaceService = game:GetService("MarketplaceService")
         local MusicFrame, MusicPreset = game:GetObjects("rbxassetid://7296373622")[1], game:GetObjects("rbxassetid://7296615234")[1]
         MusicFrame.Parent = Solaris
-        --MusicFrame.ZIndex = 5
+        MusicFrame.ZIndex = 5
         MusicFrame.Visible = SolarisLib.Settings.ShowMusicOnLaunch
         MusicFrame.Frame.Title.Text = "Not Playing"
         MusicFrame.Frame.Progress.ProgressFrame.Size = UDim2.new(0,0,1,0)
